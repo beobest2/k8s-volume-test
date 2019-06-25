@@ -1,0 +1,14 @@
+/app/jhms/log/nginx/access.log {
+    create 0644 root root
+    daily
+    copytruncate
+    rotate 10
+    missingok
+    notifempty
+    dateformat .%Y-%m-%d.log
+    dateext
+#     sharedscripts
+#         postrotate
+#             nginx -s reopen
+#         endscript
+}
